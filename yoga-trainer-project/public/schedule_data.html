@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Trainer - Personalized Schedule</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-inter">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Yoga Trainer</a>
+            <div>
+                <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Login</a>
+                <a href="register.html" class="ml-4 text-indigo-600 hover:text-indigo-800 transition duration-300">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto main-content py-16">
+        <div class="max-w-4xl mx-auto">
+            <!-- Step 1: Basic Information -->
+            <div id="step1" class="form-card p-8 mb-8 animated-form">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Step 1: Basic Information</h2>
+                <form id="basic-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="skillLevel" class="block text-gray-700 font-semibold mb-2">Skill Level</label>
+                            <select id="skillLevel" class="form-input" required>
+                                <option value="">Select your skill level</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="experience" class="block text-gray-700 font-semibold mb-2">Yoga Experience</label>
+                            <select id="experience" class="form-input" required>
+                                <option value="">Select your experience</option>
+                                <option value="0-6months">0-6 months</option>
+                                <option value="6months-2years">6 months - 2 years</option>
+                                <option value="2-5years">2-5 years</option>
+                                <option value="5+years">5+ years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label for="height" class="block text-gray-700 font-semibold mb-2">Height (cm)</label>
+                            <input type="number" id="height" placeholder="e.g., 175" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="weight" class="block text-gray-700 font-semibold mb-2">Weight (kg)</label>
+                            <input type="number" id="weight" placeholder="e.g., 70" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="age" class="block text-gray-700 font-semibold mb-2">Age</label>
+                            <input type="number" id="age" placeholder="e.g., 25" required class="form-input">
+                        </div>
+                    </div>
+                    <button type="button" onclick="nextStep()" class="form-button w-full">Next: Schedule & Preferences</button>
+                </form>
+            </div>
+
+            <!-- Step 2: Schedule & Preferences -->
+            <div id="step2" class="form-card p-8 mb-8 animated-form hidden">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Step 2: Schedule & Preferences</h2>
+                <form id="schedule-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="workingHours" class="block text-gray-700 font-semibold mb-2">Working Hours per Day</label>
+                            <input type="number" id="workingHours" placeholder="e.g., 8" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="availableTime" class="block text-gray-700 font-semibold mb-2">Available Time for Yoga</label>
+                            <select id="availableTime" class="form-input" required>
+                                <option value="">Select available time</option>
+                                <option value="morning">Morning (6 AM - 9 AM)</option>
+                                <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                                <option value="evening">Evening (6 PM - 9 PM)</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="sessionDuration" class="block text-gray-700 font-semibold mb-2">Preferred Session Duration</label>
+                        <select id="sessionDuration" class="form-input" required>
+                            <option value="">Select duration</option>
+                            <option value="15">15 minutes</option>
+                            <option value="30">30 minutes</option>
+                            <option value="45">45 minutes</option>
+                            <option value="60">60 minutes</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Days Available for Practice</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="flex items-center">
+                                <input type="checkbox" value="monday" class="mr-2" checked> Monday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="tuesday" class="mr-2" checked> Tuesday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="wednesday" class="mr-2" checked> Wednesday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="thursday" class="mr-2" checked> Thursday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="friday" class="mr-2" checked> Friday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="saturday" class="mr-2"> Saturday
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="sunday" class="mr-2"> Sunday
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button type="button" onclick="prevStep()" class="form-button bg-gray-500 hover:bg-gray-600">Previous</button>
+                        <button type="button" onclick="nextStep()" class="form-button">Next: Goals & Focus Areas</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Goals & Focus Areas -->
+            <div id="step3" class="form-card p-8 mb-8 animated-form hidden">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Step 3: Goals & Focus Areas</h2>
+                <form id="goals-form" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Primary Goals (Select up to 3)</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center">
+                                <input type="checkbox" value="flexibility" class="mr-2"> Flexibility
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="strength" class="mr-2"> Strength Building
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="balance" class="mr-2"> Balance & Stability
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="stress-relief" class="mr-2"> Stress Relief
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="weight-loss" class="mr-2"> Weight Loss
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="meditation" class="mr-2"> Meditation & Mindfulness
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="posture" class="mr-2"> Posture Improvement
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="energy" class="mr-2"> Energy & Vitality
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Focus Areas (Select areas you want to work on)</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label class="flex items-center">
+                                <input type="checkbox" value="neck-shoulders" class="mr-2"> Neck & Shoulders
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="back" class="mr-2"> Back
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="core" class="mr-2"> Core
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="legs" class="mr-2"> Legs
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="hips" class="mr-2"> Hips
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" value="full-body" class="mr-2"> Full Body
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="healthConditions" class="block text-gray-700 font-semibold mb-2">Health Conditions (Optional)</label>
+                        <textarea id="healthConditions" placeholder="Any injuries, conditions, or limitations we should know about?" class="form-input h-20"></textarea>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button type="button" onclick="prevStep()" class="form-button bg-gray-500 hover:bg-gray-600">Previous</button>
+                        <button type="submit" class="form-button">Generate My Schedule</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="form-card p-8 text-center hidden">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 mx-auto mb-4"></div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Generating Your Personalized Schedule</h3>
+                <p class="text-gray-600">Analyzing your preferences and creating the perfect yoga routine...</p>
+            </div>
+
+            <!-- Schedule Display -->
+            <div id="schedule-display" class="form-card p-8 hidden">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Your Personalized Weekly Yoga Schedule</h2>
+                <div id="schedule-content"></div>
+                <div class="text-center mt-8">
+                    <button onclick="window.location.href='/yoga'" class="form-button">Start My Practice</button>
+                    <button onclick="regenerateSchedule()" class="form-button bg-gray-500 hover:bg-gray-600 ml-4">Regenerate Schedule</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="schedule_data.js"></script>
+</body>
+</html>

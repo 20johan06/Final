@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Trainer - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-inter">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Yoga Trainer</a>
+            <div>
+                <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Login</a>
+                <a href="register.html" class="ml-4 text-indigo-600 hover:text-indigo-800 transition duration-300">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto main-content py-16">
+        <div class="max-w-md mx-auto form-card p-8 text-center animated-form">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Welcome Back</h2>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <input type="text" id="username" placeholder="Username" required class="form-input">
+                </div>
+                <div>
+                    <input type="password" id="password" placeholder="Password" required class="form-input">
+                </div>
+                <button type="submit" class="form-button">Log In</button>
+            </form>
+            <div id="message" class="mt-4 text-sm font-medium"></div>
+            <div class="mt-4 text-sm text-gray-600">
+                Don't have an account? <a href="register.html" class="text-indigo-600 hover:underline">Register here</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="message-box-overlay" class="message-box-overlay hidden"></div>
+    <div id="message-box" class="message-box hidden">
+        <h3 id="message-title" class="text-2xl font-bold mb-4"></h3>
+        <p id="message-text" class="text-gray-700 mb-6"></p>
+        <button id="close-message-btn" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700">OK</button>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

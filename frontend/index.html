@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitGuide Pro - Sports & Health Excellence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1><i class="fas fa-dumbbell"></i> FitGuide Pro</h1>
+      <p>Your Personal Sports & Health Companion</p>
+    </div>
+  </header>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#sports" class="nav-link">Sports</a>
+      <a href="#yoga" class="nav-link">Yoga</a>
+      <a href="#progress" class="nav-link">Progress</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="hero-section">
+        <h2>Transform Your Fitness Journey</h2>
+        <p>Master exercises and yoga poses with AI-powered guidance</p>
+      </div>
+      
+      <div class="cards-container">
+        <!-- Sports Card -->
+        <div class="main-card sports-card" onclick="navigateToSection('sports')">
+          <div class="card-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Sports & Exercise</h3>
+          <p>Perfect your form with real-time posture correction</p>
+          <div class="card-features">
+            <span><i class="fas fa-camera"></i> AI Camera Guidance</span>
+            <span><i class="fas fa-microphone"></i> Voice Instructions</span>
+            <span><i class="fas fa-chart-line"></i> Progress Tracking</span>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <!-- Yoga Card -->
+        <div class="main-card yoga-card" onclick="navigateToSection('yoga')">
+          <div class="card-icon">
+            <i class="fas fa-pray"></i>
+          </div>
+          <h3>Yoga & Wellness</h3>
+          <p>Master 12 Surya Namaskara poses with precision</p>
+          <div class="card-features">
+            <span><i class="fas fa-camera"></i> Pose Detection</span>
+            <span><i class="fas fa-microphone"></i> Voice Guidance</span>
+            <span><i class="fas fa-star"></i> Daily Credits</span>
+          </div>
+          <div class="card-arrow">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports Section -->
+    <section id="sports" class="section">
+      <div class="section-header">
+        <button class="back-btn" onclick="navigateToSection('home')">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
+        <h2><i class="fas fa-running"></i> Sports & Exercise</h2>
+        <p>Choose your exercise and perfect your form</p>
+      </div>
+
+      <div class="exercise-grid">
+        <div class="exercise-card" onclick="startExercise('pushups')">
+          <div class="exercise-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Push-ups</h3>
+          <p>Upper body strength</p>
+          <div class="difficulty">Beginner</div>
+        </div>
+
+        <div class="exercise-card" onclick="startExercise('squats')">
+          <div class="exercise-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Squats</h3>
+          <p>Lower body strength</p>
+          <div class="difficulty">Beginner</div>
+        </div>
+
+        <div class="exercise-card" onclick="startExercise('planks')">
+          <div class="exercise-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Planks</h3>
+          <p>Core stability</p>
+          <div class="difficulty">Intermediate</div>
+        </div>
+
+        <div class="exercise-card" onclick="startExercise('burpees')">
+          <div class="exercise-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Burpees</h3>
+          <p>Full body cardio</p>
+          <div class="difficulty">Advanced</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yoga Section -->
+    <section id="yoga" class="section">
+      <div class="section-header">
+        <button class="back-btn" onclick="navigateToSection('home')">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
+        <h2><i class="fas fa-pray"></i> Yoga & Wellness</h2>
+        <p>Master the 12 Surya Namaskara poses</p>
+      </div>
+
+      <div class="yoga-grid">
+        <div class="yoga-card" onclick="startYoga('vrikshasana')">
+          <div class="yoga-image">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3>Vrikshasana</h3>
+          <p>Tree Pose</p>
+          <div class="pose-number">1</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('bhujangasana')">
+          <div class="yoga-image">
+            <i class="fas fa-snake"></i>
+          </div>
+          <h3>Bhujangasana</h3>
+          <p>Cobra Pose</p>
+          <div class="pose-number">2</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('adho-mukha')">
+          <div class="yoga-image">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3>Adho Mukha</h3>
+          <p>Downward Dog</p>
+          <div class="pose-number">3</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('tadasana')">
+          <div class="yoga-image">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Tadasana</h3>
+          <p>Mountain Pose</p>
+          <div class="pose-number">4</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('uttanasana')">
+          <div class="yoga-image">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+          <h3>Uttanasana</h3>
+          <p>Forward Bend</p>
+          <div class="pose-number">5</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('ashwa-sanchalanasana')">
+          <div class="yoga-image">
+            <i class="fas fa-horse"></i>
+          </div>
+          <h3>Ashwa Sanchalanasana</h3>
+          <p>Lunge Pose</p>
+          <div class="pose-number">6</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('parvatasana')">
+          <div class="yoga-image">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3>Parvatasana</h3>
+          <p>Plank Pose</p>
+          <div class="pose-number">7</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('ashtanga-namaskara')">
+          <div class="yoga-image">
+            <i class="fas fa-pray"></i>
+          </div>
+          <h3>Ashtanga Namaskara</h3>
+          <p>Eight Limb Pose</p>
+          <div class="pose-number">8</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('urdhva-mukha')">
+          <div class="yoga-image">
+            <i class="fas fa-arrow-up"></i>
+          </div>
+          <h3>Urdhva Mukha</h3>
+          <p>Upward Dog</p>
+          <div class="pose-number">9</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('balasana')">
+          <div class="yoga-image">
+            <i class="fas fa-baby"></i>
+          </div>
+          <h3>Balasana</h3>
+          <p>Child's Pose</p>
+          <div class="pose-number">10</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('sarvangasana')">
+          <div class="yoga-image">
+            <i class="fas fa-arrow-up"></i>
+          </div>
+          <h3>Sarvangasana</h3>
+          <p>Shoulder Stand</p>
+          <div class="pose-number">11</div>
+        </div>
+
+        <div class="yoga-card" onclick="startYoga('savasana')">
+          <div class="yoga-image">
+            <i class="fas fa-bed"></i>
+          </div>
+          <h3>Savasana</h3>
+          <p>Corpse Pose</p>
+          <div class="pose-number">12</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exercise Session Section -->
+    <section id="exercise-session" class="section">
+      <div class="session-container">
+        <div class="camera-section">
+          <div class="camera-header">
+            <button class="back-btn" onclick="endSession()">
+              <i class="fas fa-times"></i> End Session
+            </button>
+            <h3 id="current-exercise">Push-ups</h3>
+          </div>
+          
+          <div class="camera-container">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div class="camera-overlay">
+              <div class="position-guide">
+                <div class="guide-text">Position your body in frame</div>
+                <div class="body-outline" id="body-outline"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div class="daily-stats">
+            <h4>Today's Progress</h4>
+            <div class="stat-item">
+              <i class="fas fa-fire"></i>
+              <span>Daily Credits: <span id="daily-credits">0</span></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-star"></i>
+              <span>Bonus Points: <span id="bonus-points">0</span></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-calendar-check"></i>
+              <span>Workouts: <span id="workouts-completed">0</span></span>
+            </div>
+          </div>
+
+          <div class="current-session">
+            <h4>Current Session</h4>
+            <div class="session-stats">
+              <div class="stat-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Reps: <span id="current-reps">0</span></span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <span>Time: <span id="session-time">00:00</span></span>
+              </div>
+              <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Perfect: <span id="perfect-reps">0</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily-schedule">
+            <h4>Daily Schedule</h4>
+            <div class="schedule-list" id="schedule-list">
+              <!-- Schedule items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Yoga Session Section -->
+    <section id="yoga-session" class="section">
+      <div class="session-container">
+        <div class="camera-section">
+          <div class="camera-header">
+            <button class="back-btn" onclick="endSession()">
+              <i class="fas fa-times"></i> End Session
+            </button>
+            <h3 id="current-yoga-pose">Vrikshasana</h3>
+          </div>
+          
+          <div class="camera-container">
+            <video id="yoga-video" autoplay muted playsinline></video>
+            <canvas id="yoga-canvas"></canvas>
+            <div class="camera-overlay">
+              <div class="position-guide">
+                <div class="guide-text">Position your body in frame</div>
+                <div class="body-outline" id="yoga-body-outline"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-section">
+          <div class="daily-stats">
+            <h4>Today's Progress</h4>
+            <div class="stat-item">
+              <i class="fas fa-om"></i>
+              <span>Daily Credits: <span id="yoga-daily-credits">0</span></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-star"></i>
+              <span>Bonus Points: <span id="yoga-bonus-points">0</span></span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-pray"></i>
+              <span>Poses: <span id="poses-completed">0</span></span>
+            </div>
+          </div>
+
+          <div class="current-session">
+            <h4>Current Pose</h4>
+            <div class="pose-info">
+              <div class="pose-image">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div class="pose-details">
+                <h5 id="pose-name">Vrikshasana</h5>
+                <p id="pose-description">Tree Pose - Improves balance and focus</p>
+                <div class="pose-timer">
+                  <i class="fas fa-clock"></i>
+                  <span id="pose-time">00:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="daily-schedule">
+            <h4>Today's Schedule</h4>
+            <div class="schedule-list" id="yoga-schedule-list">
+              <!-- Yoga schedule items will be populated here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Voice Feedback Display -->
+  <div id="voice-feedback" class="voice-feedback" style="display: none;">
+    <i class="fas fa-microphone"></i>
+    <span id="feedback-text"></span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.6.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+  <script src="script.js"></script>
+</body>
+</html>

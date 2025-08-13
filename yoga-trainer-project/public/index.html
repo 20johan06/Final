@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Trainer - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-inter">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Yoga Trainer</a>
+            <div>
+                <a href="login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">Login</a>
+                <a href="register.html" class="ml-4 text-indigo-600 hover:text-indigo-800 transition duration-300">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <section class="text-center">
+            <h1 class="text-5xl font-bold text-gray-800 leading-tight mb-4">Master Your Poses with AI-Powered Feedback</h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Our advanced AI and voice APIs correct your yoga poses in real-time, helping you improve your form and prevent injuries.
+            </p>
+            <div class="space-x-4">
+                <a href="register.html" class="bg-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-lg">Get Started</a>
+                <a href="#features" class="text-indigo-600 px-8 py-4 text-lg font-semibold border-2 border-indigo-600 rounded-full hover:bg-indigo-50 transition duration-300">Learn More</a>
+            </div>
+        </section>
+
+        <section id="features" class="mt-24">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.55-4.55a1 1 0 011.414 1.414L16.414 11l4.55 4.55a1 1 0 01-1.414 1.414L15 12.414l-4.55 4.55a1 1 0 01-1.414-1.414L13.586 11l-4.55-4.55a1 1 0 011.414-1.414L15 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Real-time Pose Correction</h3>
+                    <p class="text-gray-600">Our AI analyzes your movements and provides instant, accurate feedback to perfect your form.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 011 2.828l-7.778 7.778a2 2 0 01-.68 1.942l-2.617.872a1 1 0 01-1.285-1.285l.872-2.617a2 2 0 011.942-.68l7.778-7.778z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Personalized Daily Schedules</h3>
+                    <p class="text-gray-600">Get a custom routine tailored to your skill level, height, weight, and working hours.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6m3-6a3 3 0 003 3m0-3h12m0 0a2 2 0 002-2v-3a2 2 0 00-2-2H9m3 4v.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Weekly Progress Reports</h3>
+                    <p class="text-gray-600">Track your performance with detailed reports to see your improvements over time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white shadow-inner mt-16 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            &copy; 2024 Yoga Trainer. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

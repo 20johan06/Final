@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Trainer - Pose Corrector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        #camera-video, #output-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scaleX(-1); /* Mirror the video */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Yoga Trainer</a>
+            <a href="day.html" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">End Session</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto main-content py-16">
+        <div class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-gray-800">Your Session</h2>
+            <p class="text-xl text-gray-600 mt-2">Follow the instructions for the pose below.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Video and Output Area -->
+            <div class="lg:w-2/3 video-container rounded-lg shadow-xl overflow-hidden">
+                <video id="camera-video" playsinline></video>
+                <canvas id="output-canvas"></canvas>
+            </div>
+
+            <!-- Pose Info and Feedback -->
+            <div class="lg:w-1/3 space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2" id="current-pose-name">Mountain Pose</h3>
+                    <p class="text-gray-600 mb-4" id="current-pose-description">Stand tall with feet together, shoulders relaxed, and arms at your sides.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-semibold text-gray-700">Time Remaining:</span>
+                        <span id="pose-timer" class="text-2xl font-bold text-indigo-600">30s</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">AI Feedback</h3>
+                    <div id="feedback-log" class="space-y-2 text-gray-700 h-40 overflow-y-auto">
+                        <p class="text-gray-500">Waiting for you to start...</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="next-pose-btn" class="form-button w-full">Next Pose</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white shadow-inner mt-16 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            &copy; 2024 Yoga Trainer. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Placeholders for AI libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@0.0.1/dist/pose-detection.js"></script>
+
+    <script src="main.js"></script>
+    <script src="yoga.js"></script>
+</body>
+</html>
